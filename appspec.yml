@@ -1,0 +1,17 @@
+version: 0.0
+
+os: linux 
+
+files:
+  - source: target/awsdemo.war
+    destination: /opt/tomcat_helloworld/webapps/
+
+ApplicationStop:
+  - location: "systemctl stop tomcat_helloworld" 
+    timeout: "60"
+    runas: "root"
+
+ApplicationStart:
+  - location: "systemctl start tomcat_helloworld" 
+    timeout: "60"
+    runas: "systemctl start tomcat_helloworld"

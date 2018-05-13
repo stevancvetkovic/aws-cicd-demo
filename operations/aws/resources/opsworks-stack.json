@@ -1,0 +1,28 @@
+{
+    "ServiceRoleArn": "arn:aws:iam::<your-aws-account-id>:role/aws-opsworks-service-role",
+    "VpcId": "vpc-7f164e04",
+    "DefaultRootDeviceType": "ebs",
+    "Name": "aws-cicd-stack",
+    "HostnameTheme": "Layer_Dependent",
+    "UseCustomCookbooks": true,
+    "UseOpsworksSecurityGroups": true,
+    "Region": "us-east-1",
+    "DefaultAvailabilityZone": "us-east-1c",
+    "CustomCookbooksSource": {
+        "Url": "https://s3.amazonaws.com/aws-cicd-demo-bucket/cookbooks.zip",
+        "Type": "s3"
+    },
+    "ConfigurationManager": {
+        "Version": "12",
+        "Name": "Chef"
+    },
+    "ChefConfiguration": {},
+    "DefaultSubnetId": "subnet-a419ed8a",
+    "DefaultSshKeyName": "stevan",
+    "DefaultInstanceProfileArn": "arn:aws:iam::<your-aws-account-id>:instance-profile/aws-opsworks-ec2-role",
+    "Attributes": {
+        "Color": "rgb(45, 114, 184)"
+    },
+    "DefaultOs": "Ubuntu 16.04 LTS",
+    "AgentVersion": "LATEST"
+}

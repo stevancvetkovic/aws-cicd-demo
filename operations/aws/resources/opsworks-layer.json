@@ -1,0 +1,38 @@
+{
+    "LifecycleEventConfiguration": {
+        "Shutdown": {
+            "DelayUntilElbConnectionsDrained": false,
+            "ExecutionTimeout": 120
+        }
+    },
+    "CustomRecipes": {
+        "Undeploy": [],
+        "Setup": [
+            "aws_code_deploy_agent::default",
+            "setup_tomcat::default"
+        ],
+        "Configure": [],
+        "Shutdown": [],
+        "Deploy": []
+    },
+    "Packages": [],
+    "Name": "Tomcat",
+    "CloudWatchLogsConfiguration": {
+        "LogStreams": [
+            {
+                "File": "/var/lib/aws/opsworks/chef/*.log",
+                "LogGroupName": "test/tomcat/opsworks-command-log"
+            }
+        ],
+        "Enabled": false
+    },
+    "CustomSecurityGroupIds": [
+        "sg-2118f169"
+    ],
+    "AutoAssignElasticIps": false,
+    "EnableAutoHealing": true,
+    "AutoAssignPublicIps": true,
+    "UseEbsOptimizedInstances": false,
+    "Shortname": "tomcat",
+    "Type": "custom"
+}

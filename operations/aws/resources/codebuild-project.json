@@ -1,0 +1,26 @@
+{
+    "name": "aws-cicd-demo",
+    "serviceRole": "arn:aws:iam::<your-aws-account-id>:role/CodeBuild-ServiceRole",
+    "artifacts": {
+        "namespaceType": "NONE",
+        "packaging": "ZIP",
+        "type": "S3",
+        "location": "aws-cicd-demo-bucket",
+        "name": "aws-cicd-demo"
+    },
+    "cache": {
+        "type": "S3",
+        "location": "aws-cicd-demo-bucket"
+    },
+    "environment": {
+        "computeType": "BUILD_GENERAL1_MEDIUM",
+        "privilegedMode": false,
+        "image": "aws/codebuild/java:openjdk-8",
+        "type": "LINUX_CONTAINER"
+    },
+    "source": {
+        "insecureSsl": false,
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/aws-cicd-demo"
+    }
+}

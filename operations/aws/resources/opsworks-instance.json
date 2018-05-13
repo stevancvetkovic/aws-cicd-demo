@@ -1,0 +1,21 @@
+{
+    "EbsOptimized": false,
+    "SshKeyName": "stevan",
+    "Tenancy": "default",
+    "AgentVersion": "INHERIT",
+    "InstanceType": "c3.large",
+    "BlockDeviceMappings": [
+        {
+            "DeviceName": "ROOT_DEVICE",
+            "Ebs": {
+                "VolumeSize": 8,
+                "VolumeType": "gp2"
+            }
+        }
+    ],
+    "Architecture": "x86_64",
+    "InstallUpdatesOnBoot": true,
+    "Os": "Ubuntu 16.04 LTS",
+    "VirtualizationType": "hvm",
+    "RootDeviceType": "ebs"
+}

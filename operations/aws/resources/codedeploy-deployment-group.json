@@ -1,0 +1,24 @@
+{
+    "applicationName": "aws-cicd-demo",
+    "deploymentConfigName": "CodeDeployDefault.OneAtATime",
+    "ec2TagSet": {
+        "ec2TagSetList": [
+            [
+                {
+                    "Type": "KEY_AND_VALUE",
+                    "Value": "Tomcat",
+                    "Key": "opsworks:layer:tomcat"
+                }
+            ]
+        ]
+    },
+    "autoRollbackConfiguration": {
+        "enabled": false
+    },
+    "deploymentStyle": {
+        "deploymentType": "IN_PLACE",
+        "deploymentOption": "WITHOUT_TRAFFIC_CONTROL"
+    },
+    "serviceRoleArn": "arn:aws:iam::<your-aws-account-id>:role/CodeDeploy-ServiceRole",
+    "deploymentGroupName": "aws-cicd-demo"
+}
