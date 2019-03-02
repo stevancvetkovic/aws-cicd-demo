@@ -14,4 +14,4 @@ ApplicationStop:
 ApplicationStart:
   - location: "systemctl start tomcat_helloworld" 
     timeout: "60"
-    runas: "systemctl start tomcat_helloworld"
+    runas: "root"
